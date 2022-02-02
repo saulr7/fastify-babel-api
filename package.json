@@ -3,10 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "build": "babel index.js -d dist",
+    "dev": "nodemon --exec babel-node index.js ",
+    "start": "npm run build && node dist/index.js"
+  },
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.17.0",
     "@babel/core": "^7.17.0",
+    "@babel/node": "^7.16.8",
     "@babel/preset-env": "^7.16.11"
   }
 }
