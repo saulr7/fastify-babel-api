@@ -8,7 +8,9 @@
     "dev": "nodemon --exec babel-node index.js ",
     "start": "npm run build && node dist/index.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "fastify": "^3.27.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.17.0",
     "@babel/core": "^7.17.0",
