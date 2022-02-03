@@ -1,3 +1,3 @@
-import Server from "./server";
+import Server from './server';
 
-new Server(3006).serve()
+new Server(3006).serve();
