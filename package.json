@@ -6,7 +6,8 @@
   "scripts": {
     "build": "babel index.js -d dist",
     "dev": "nodemon --exec babel-node index.js ",
-    "start": "npm run build && node dist/index.js"
+    "start": "npm run build && node dist/index.js",
+    "test": "jest"
   },
   "dependencies": {
     "fastify": "^3.27.0"
@@ -16,8 +17,11 @@
     "@babel/core": "^7.17.0",
     "@babel/node": "^7.16.8",
     "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.4.6",
     "eslint": "^8.8.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.4"
+    "eslint-plugin-import": "^2.25.4",
+    "jest": "^27.4.7",
+    "supertest": "^6.2.2"
   }
 }
