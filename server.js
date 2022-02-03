@@ -6,16 +6,15 @@ class Server {
     this.app = new App().app;
   }
 
-  serve() {
-    this.app.listen(this.PORT, (err, add) => {
-      if (err) {
-        // eslint-disable-next-line no-console
-        console.log('something went wrong');
-        return;
-      }
+  async serve() {
+    try {
+      const add = await this.app.listen(this.PORT);
       // eslint-disable-next-line no-console
       console.log('runnning at ', add);
-    });
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.log('something went wrong', error);
+    }
   }
 }
 
